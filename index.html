@@ -5,15 +5,22 @@
   <title>Teachable Machine</title>
   <meta charset="utf-8" />
   <script src="scripts/tf.min.js"></script>
+  <script src="scripts/knn-classifier.min.js"></script>
   <script src="scripts/mobilenet.min.js"></script>
 </head>
 
 <body>
+  <button id="class-a">Add A</button>
+  <button id="class-b">Add B</button>
+  <button id="class-c">Add C</button>
   <div id="console"></div>
   <!-- Add an video source -->
   <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
   <!-- Load index.js after the content of the page -->
   <script src="scripts/index.js"></script>
+  <p> Press one of the buttons ("Add X" where "X" is "A", "B", or "C"). Each time you click each of the buttons, a
+    single frame from the webcam is added as training example. The model will continue to make predictions from the
+    webcam images.</p>
 </body>
 
 </html>
